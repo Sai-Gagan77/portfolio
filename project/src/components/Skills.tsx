@@ -46,7 +46,7 @@ export const Skills = () => {
   }, []);
 
   return (
-    <section id="skills" ref={ref} className="py-32 px-6 bg-white relative overflow-hidden">
+    <section id="skills" ref={ref} className="py-32 px-6 bg-dark relative overflow-hidden">
       <motion.div style={{ opacity }} className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -55,7 +55,7 @@ export const Skills = () => {
           transition={{ type: 'spring', stiffness: 80, damping: 20 }}
           className="text-center mb-20"
         >
-          <h2 className="text-6xl md:text-7xl font-black tracking-tighter text-gray-900 mb-4">
+          <h2 className="text-6xl md:text-7xl font-black tracking-tighter text-secondary mb-4">
             TECH STACK
           </h2>
           <motion.div
@@ -63,7 +63,7 @@ export const Skills = () => {
             whileInView={{ scaleX: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="w-24 h-1 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto rounded-full"
+            className="w-24 h-1 bg-gradient-to-r from-accent to-secondary mx-auto rounded-full"
           />
         </motion.div>
 
@@ -88,7 +88,7 @@ export const Skills = () => {
                 }}
                 className="flex-shrink-0 cursor-hover group"
               >
-                <div className="bg-gradient-to-br from-white to-gray-50 backdrop-blur-xl rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-200 hover:border-indigo-300 h-40 w-40 flex flex-col items-center justify-center">
+                <div className="bg-gradient-to-br from-primary to-accent backdrop-blur-xl rounded-2xl p-8 h-40 w-40 flex flex-col items-center justify-center">
                   <div className="mb-4 h-16 w-16 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <img
                       src={skill.logo}
@@ -100,7 +100,7 @@ export const Skills = () => {
                     />
                   </div>
 
-                  <h3 className="text-sm font-bold text-gray-900 text-center tracking-tight">
+                  <h3 className="text-sm font-bold text-secondary text-center tracking-tight">
                     {skill.name}
                   </h3>
                 </div>
@@ -108,8 +108,8 @@ export const Skills = () => {
             ))}
           </motion.div>
 
-          <div className="absolute left-0 top-0 bottom-4 w-32 bg-gradient-to-r from-white via-white to-transparent pointer-events-none z-10" />
-          <div className="absolute right-0 top-0 bottom-4 w-32 bg-gradient-to-l from-white via-white to-transparent pointer-events-none z-10" />
+          <div className="absolute left-0 top-0 bottom-4 w-32 bg-gradient-to-r from-dark via-dark to-transparent pointer-events-none z-10" />
+          <div className="absolute right-0 top-0 bottom-4 w-32 bg-gradient-to-l from-dark via-dark to-transparent pointer-events-none z-10" />
         </div>
 
         <motion.div
@@ -117,7 +117,7 @@ export const Skills = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5 }}
-          className="text-center mt-12 text-sm font-semibold text-gray-500 uppercase tracking-widest"
+          className="text-center mt-12 text-sm font-semibold text-secondary uppercase tracking-widest"
         >
           Auto-scrolling showcase
         </motion.div>

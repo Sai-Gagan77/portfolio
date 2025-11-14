@@ -5,12 +5,12 @@ export const Hero = () => {
   const { ref, y } = useParallax(30);
 
   return (
-    <section ref={ref} className="min-h-screen flex items-center justify-center relative overflow-hidden bg-white px-6">
+    <section ref={ref} className="min-h-screen flex items-center justify-center relative overflow-hidden bg-dark px-6">
       <motion.div
         style={{ y }}
         className="max-w-5xl mx-auto text-center"
       >
-        <motion.h1
+        <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
@@ -19,10 +19,30 @@ export const Hero = () => {
             damping: 20,
             delay: 0.6,
           }}
-          className="text-7xl md:text-8xl font-black tracking-tighter mb-6 text-gray-900"
+          className="relative text-7xl md:text-8xl font-black tracking-tighter mb-6 text-secondary h-48 flex items-center justify-center"
         >
-          Kota Venkata Sai Gagan
-        </motion.h1>
+          <motion.div
+            initial={{ opacity: 1 }}
+            whileHover={{ opacity: 0 }}
+            className="flex items-center justify-center"
+          >
+            <svg
+              className="w-48 h-48 text-secondary"
+              fill="currentColor"
+              viewBox="0 0 222.407 60.437"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M48.29,34.011c-1.89-1.92-2.92-4.2-2.92-6.81c0-2.61,1.03-4.89,2.92-6.81c1.89-1.92,4.14-2.88,6.75-2.88   c2.61,0,4.86,0.96,6.75,2.88c1.89,1.92,2.83,4.2,2.83,6.81c0,2.61-0.94,4.89-2.83,6.81c-1.89,1.92-4.14,2.88-6.75,2.88   C52.43,36.891,50.18,35.931,48.29,34.011z M108.24,17.501h8.1v27h-8.1V17.501z M86.37,17.501h8.1v27h-8.1V17.501z M26.49,17.501h-8.1   v27h8.1V17.501z M207.36,32.441c0,1.98-1.59,3.59-3.56,3.59h-10.47v-7.18h10.47c1.97,0,3.56,1.61,3.56,3.59z M207.36,19.571   c0,1.98-1.59,3.59-3.56,3.59h-10.47v-7.18h10.47c1.97,0,3.56,1.61,3.56,3.59z M186.22,44.501h-8.1v-27h8.1V44.501z M165.23,44.501   h-8.1v-27h8.1V44.501z M144.13,44.501h-8.1v-27h8.1V44.501z M4.95,44.501H-3.15v-27h8.1V44.501z" />
+            </svg>
+          </motion.div>
+          <motion.h1
+            initial={{ opacity: 0 }}
+            whileHover={{ opacity: 1 }}
+            className="absolute inset-0 flex items-center justify-center"
+          >
+            Kota Venkata Sai Gagan
+          </motion.h1>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -35,7 +55,7 @@ export const Hero = () => {
           }}
           className="mb-12"
         >
-          <p className="text-2xl md:text-3xl font-light text-gray-500 tracking-wide">
+          <p className="text-2xl md:text-3xl font-light text-secondary tracking-wide">
             Java Full Stack Developer
           </p>
         </motion.div>
@@ -49,7 +69,7 @@ export const Hero = () => {
             damping: 20,
             delay: 1,
           }}
-          className="text-lg font-light text-gray-600 max-w-3xl mx-auto leading-relaxed"
+          className="text-lg font-light text-secondary max-w-3xl mx-auto leading-relaxed"
         >
           To build a long-term career in a forward-thinking organization that encourages continuous learning, skill development, and professional growth.
         </motion.p>
@@ -69,7 +89,7 @@ export const Hero = () => {
               duration: 2,
               ease: 'easeInOut',
             }}
-            className="text-gray-400"
+            className="text-secondary"
           >
             <svg
               className="w-6 h-6 mx-auto"
